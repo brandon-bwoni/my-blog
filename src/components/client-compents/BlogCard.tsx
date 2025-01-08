@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
-import { Card } from "./ui/card";
+import { Button } from "../ui/button";
+import { Card } from "../ui/card";
 import Image from "next/image";
 
 type BlogProps = {
@@ -23,7 +23,7 @@ const BlogCard = ({
 }: BlogProps) => {
   return (
     <Link href={`/blogs/${id}`}>
-      <Card className="w-[330px] sm:max-w-[300px] h-[440px] rounded-3xl relative bg-gray-100 shadow-sm  hover:transition-all hover:shadow-xl">
+      <Card className="w-[290px] sm:max-w-[290px] h-[390px] rounded-3xl relative bg-gray-200 shadow-sm  hover:transition-all hover:shadow-xl border-none">
         <div className="h-1/2">
           <Link href="#">
             <Image

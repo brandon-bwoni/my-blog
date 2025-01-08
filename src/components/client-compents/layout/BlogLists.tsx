@@ -46,7 +46,7 @@ const BlogLists: React.FC = ({ selectedCategory }) => {
 
   if (filteredBlogs.length === 0) {
     return (
-      <div className="text-center py-12">
+      <div className="text-center py-8">
         <p className="text-gray-600 dark:text-gray-300">
           No blogs found in this category.
         </p>
@@ -73,6 +73,9 @@ const BlogLists: React.FC = ({ selectedCategory }) => {
           ))}
         </div>
       )}
+      <span className="h-8 w-8 flex justify-center items-center mx-auto border border-gray-200">
+        <p>1</p>
+      </span>
     </div>
   );
 };

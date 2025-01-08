@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import MainNav from "@/components/layout/MainNav";
-import Footer from "@/components/layout/Footer";
+import MainNav from "@/components/client-compents/layout/MainNav";
+import Footer from "@/components/client-compents/layout/Footer";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +22,6 @@ export default function RootLayout({
       <body className={`${inter.className} no-scrollbar `}>
         <main>
           {children}
-          <Footer />
           <div className="flex justify-center gap-4 text-xs items-center bg-white h-6 font-medium">
             <span>&copy; 2024</span>
             <span>

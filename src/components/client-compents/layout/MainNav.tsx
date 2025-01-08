@@ -11,7 +11,7 @@ interface BlogNavProps {
   onCategoryChange?: (category: string) => void;
 }
 
-const MainNav: React.FC = ({ onCategoryChange }) => {
+const MainNav: React.FC = ({ onCategoryChange }: BlogNavProps) => {
   const [navSize, setNavSize] = useState("16");
   const [toggleMenu, setToggleMenu] = useState(false);
   const [navColor, setNavColor] = useState("transparent");
@@ -28,7 +28,7 @@ const MainNav: React.FC = ({ onCategoryChange }) => {
   return (
     <div className="flex justify-center">
       <nav className="h-16 fixed top-0 w-full z-50 bg-black mx-auto py-1 px-2">
-        <div className="h-16 flex mx-auto w-[90%]">
+        <div className="h-16 flex mx-auto w-[95%]">
           {/* Primary menu and logo */}
           <div className="w-1/3 flex items-center justify-start gap-40">
             <div>
@@ -42,12 +42,18 @@ const MainNav: React.FC = ({ onCategoryChange }) => {
             </div>
           </div>
           {/* secondary */}
-          <div className="w-2/3 flex justify-end lg:justify-start items-center gap-10 xl:gap-16">
-            <div className="hidden text-white lg:flex gap-8 xl:gap-16 font-medium text-sm">
+          <div className="w-2/3 flex justify-end  items-center gap-8 xl:gap-16 px-6">
+            <Link href="#">
+              <p className="text-white hover:text-yellow-300 text-sm">Home</p>
+            </Link>
+            <Link href="/about">
+              <p className="text-white hover:text-yellow-300 text-sm">About</p>
+            </Link>
+            {/* <div className="hidden text-white lg:flex gap-8 xl:gap-16 font-medium text-sm">
               {pathname === "/" && (
                 <BlogsNav onCategoryChange={onCategoryChange} />
               )}
-            </div>
+            </div> */}
             <div className="flex lg:hidden">
               <SearchFunction />
             </div>

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-/**import axios from axios */
-/**import {toast} from "react-toastify" */
+import axios from "axios";
+import { toast } from "react-toastify";
 
 import {
   Table,
@@ -24,7 +24,7 @@ const BlogList = () => {
   };
 
   // deleting a blog
-  const deleteBlog = async (blogId) => {
+  const deleteBlog = async (blogId: string) => {
     const response = await axios.delete("/api/blog/", {
       params: {
         id: blogId,
@@ -60,7 +60,7 @@ const BlogList = () => {
               return (
                 <BlogTableItem
                   key={index}
-                  blogId={item_id}
+                  blogId={index}
                   title={item.title}
                   author={item.name}
                   authorImg={item.authorImg}

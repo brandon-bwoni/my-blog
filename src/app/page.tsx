@@ -1,10 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 
-import MainNav from "@/components/layout/MainNav";
-import BlogLists from "@/components/layout/BlogLists";
-import SearchFunction from "@/components/search/SearchFunction";
-import SideNav from "@/components/layout/SideNav";
+import MainNav from "@/components/client-compents/layout/MainNav";
+import BlogLists from "@/components/client-compents/layout/BlogLists";
+import SearchFunction from "@/components/client-compents/search/SearchFunction";
+import SideNav from "@/components/client-compents/layout/SideNav";
+import Footer from "@/components/client-compents/Footer";
 // import SkeletonList from "@/components/SkeletonList";
 
 export default function Home() {
@@ -24,16 +25,17 @@ export default function Home() {
   };
 
   return (
-    <div className="no-scrollbar mt-16">
-      <MainNav onCategoryChange={handleCategoryChange} />
-      <section className="w-full h-screen  flex flex-row  ">
+    <div className="h-full no-scrollbar bg-gray-100 mt-16 ">
+      <MainNav />
+      <section className="w-full h-full gap-2 flex flex-row mb-8 px-8">
         <div className="w-full lg:w-[80%] h-full overflow-y-scroll no-scrollbar mb-8">
           <BlogLists selectedCategory={selectedCategory} />
         </div>
-        <div className="w-[20%] hidden xl:flex justify-center mr-2 bg-gray-200 mt-3 mb-6  rounded-2xl pt-8 sticky top-16 px-2">
-          <SideNav />
+        <div className="h-full w-[20%] no-scrollbar hidden xl:flex justify-center mr-2  mt-4 mb-6  rounded-2xl pt-4 sticky top-16 px-2">
+          <SideNav onCategoryChange={handleCategoryChange} />
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

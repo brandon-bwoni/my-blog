@@ -9,7 +9,7 @@ import LatestPost from "./LatestPost";
 const Hero = () => {
   return (
     <>
-      <div className="wrap h-[50vh] xl:h-[85vh] overflow-hidden w-full rounded-b-2xl mb-4">
+      <div className="wrap h-[50vh] xl:h-[80vh] overflow-hidden w-full rounded-b-2xl mb-4">
         <LatestPost />
         <div className="w-full">
           <Image

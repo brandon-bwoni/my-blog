@@ -23,15 +23,15 @@ const BlogsNav: React.FC<BlogsNavProps> = ({ onCategoryChange }) => {
   ];
 
   return (
-    <div className="flex h-12 lg:h-14 justify-center sm:gap-4 md:gap-6 lg:gap-12 mb-4 bg-black min-w-2xl w-[91%] mx-auto rounded-full text-xs lg:text-sm py-[6px] lg:py-2 ">
+    <div className="flex flex-col h-[200px] w-40  justify-center pb-1 gap-1 mx-auto rounded-2xl text-xs lg:text-sm ">
       {categories.map((category) => (
         <button
           key={category.id}
           onClick={() => handleCategoryClick(category.label)}
           className={
             selectedCategory === category.label
-              ? `bg-yellow-300 font-semibold text-black px-4 rounded-full text-nowrap`
-              : "text-white hover:text-yellow-300 text-nowrap"
+              ? `bg-yellow-300 font-semibold text-black rounded-xl text-nowrap py-2 px-2 text-start`
+              : "text-black py-2 px-2 hover:bg-yellow-300/70 text-nowrap hover:rounded-xl text-start"
           }
         >
           {category.label}

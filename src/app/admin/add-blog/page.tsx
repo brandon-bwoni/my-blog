@@ -2,7 +2,9 @@
 import Image from "next/image";
 import { useState } from "react";
 /**import axios from axios */
-/**import {toast} from "react-toastify" */
+import { toast } from "react-toastify";
+
+import { MdOutlineFileUpload } from "react-icons/md";
 
 import { blogData } from "@/assets/assets";
 import upload from "@/assets/upload.png";
@@ -65,7 +67,7 @@ const AddBlog = () => {
         <p className="text-xl font-semibold">Upload thumbnail</p>
         <label htmlFor="image">
           <Image
-            src={!image ? assets.uploadIcon : URL.createObjectURL(image)}
+            src={!image ? upload : URL.createObjectURL(image)}
             width={140}
             height={70}
             alt=""

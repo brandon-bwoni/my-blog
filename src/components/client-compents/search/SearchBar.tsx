@@ -38,7 +38,7 @@ export function SearchBar({ setResults }: any) {
   };
 
   return (
-    <div className="relative flex flex-col justify-center items-center mt-40 lg:mt-0">
+    <div className="relative flex flex-col justify-center items-center">
       {/* Search input */}
       <div className="flex justify-center items-center border-[1.5px] rounded-full min-w-40 px-[1.5px] py-[1.5px] border-gray-600">
         <div className="flex justify-start rounded-full px-2 ">
@@ -49,7 +49,7 @@ export function SearchBar({ setResults }: any) {
           onChange={changeHandler}
           type="text"
           placeholder="Search..."
-          className="rounded-full outline-none border-none placeholder:text-sm placeholder:text-gray-200 focus:placeholder:text-gray-700 active:outline-none active:border-none caret-gray-700 text-black shadow-none"
+          className="rounded-full outline-none border-none placeholder:text-sm placeholder:text-gray-400 active:outline-none active:border-none caret-gray-700 text-black shadow-none"
         />
       </div>
 

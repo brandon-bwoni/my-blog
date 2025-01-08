@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-/**import axios from axios */
-/**import {toast} from "react-toastify" */
+import axios from "axios";
+import { toast } from "react-toastify";
 
 import EmailTable from "@/components/admin-components/EmailTable";
 
