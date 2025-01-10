@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 type BlogProps = {
   id: number;
   title: string;
   description: string;
-  image: HTMLImageElement;
+  image: StaticImageData;
   date: Date;
   category: string;
   name: string;
@@ -23,7 +23,7 @@ const BlogCard = ({
 }: BlogProps) => {
   return (
     <Link href={`/blogs/${id}`}>
-      <Card className="w-[290px] sm:max-w-[290px] h-[390px] rounded-3xl relative bg-gray-200 shadow-sm  hover:transition-all hover:shadow-xl border-none">
+      <Card className="w-[270px] sm:max-w-[260px] h-[370px] rounded-3xl relative bg-gray-200 border  hover:transition-all hover:shadow-xl hover:border-0 shadow-none">
         <div className="h-1/2">
           <Link href="#">
             <Image
@@ -33,13 +33,15 @@ const BlogCard = ({
             />
           </Link>
         </div>
-        <div className="h-[240px] flex flex-col gap-3 justify-center pt-2 px-3 bg-gray-100 hover:bg-white rounded-3xl absolute bottom-[1px]">
+        <div className="h-[210px] flex flex-col gap-2 justify-center pt-2 px-3 bg-gray-100 hover:bg-white rounded-3xl absolute bottom-[1px]">
           <Button className="max-w-32 text-sm rounded-full font-semibold shadow-none hover:shadow-none hover:bg-yellow-300 bg-yellow-300 text-black h-6">
             {category}
           </Button>
-          <div className="flex flex-col gap-2  items-center">
-            <h1 className="font-bold text-lg leading-5 text-wrap">{title}</h1>
-            <p className="text-normal leading-4 ">{description.slice(0, 90)}</p>
+          <div className="flex flex-col gap-1  items-center">
+            <h1 className="font-semibold text-lg leading-5 text-wrap">
+              {title}
+            </h1>
+            <p className="text-sm leading-4 ">{description.slice(0, 90)}</p>
           </div>
           <div className="flex gap-1 text-xs justify-start font-bold">
             <code>&#8212; </code>By

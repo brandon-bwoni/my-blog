@@ -38,18 +38,18 @@ export function SearchBar({ setResults }: any) {
   };
 
   return (
-    <div className="relative flex flex-col justify-center items-center">
+    <div className=" flex flex-col justify-center items-center">
       {/* Search input */}
-      <div className="flex justify-center items-center border-[1.5px] rounded-full min-w-40 px-[1.5px] py-[1.5px] border-gray-600">
-        <div className="flex justify-start rounded-full px-2 ">
-          <MagnifyingGlassIcon className="sm:h-4 sm:w-4 lg:h-5 lg:w-5 text-black" />
+      <div className="flex justify-center items-center border-[1.5px] rounded-full sm:w-32 lg:w-[190px] ml-1 px-[1px] py-[1.5px] border-gray-600">
+        <div className="flex justify-start rounded-full px-2">
+          <MagnifyingGlassIcon className="sm:h-4 sm:w-4 lg:h-5 lg:w-5 text-gray-600" />
         </div>
         <Input
           value={input}
           onChange={changeHandler}
           type="text"
           placeholder="Search..."
-          className="rounded-full outline-none border-none placeholder:text-sm placeholder:text-gray-400 active:outline-none active:border-none caret-gray-700 text-black shadow-none"
+          className="rounded-full px-0 outline-none border-none placeholder:text-sm placeholder:text-gray-400 active:outline-none active:border-none caret-gray-400 text-gray-400 shadow-none focus:placeholder-transparent"
         />
       </div>
 

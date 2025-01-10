@@ -28,7 +28,7 @@ const MainNav: React.FC = ({ onCategoryChange }: BlogNavProps) => {
   return (
     <div className="flex justify-center">
       <nav className="h-16 fixed top-0 w-full z-50 bg-black mx-auto py-1 px-2">
-        <div className="h-16 flex mx-auto w-[95%]">
+        <div className="h-16 flex mx-auto w-full lg:w-[95%]">
           {/* Primary menu and logo */}
           <div className="w-1/3 flex items-center justify-start gap-40">
             <div>
@@ -42,23 +42,27 @@ const MainNav: React.FC = ({ onCategoryChange }: BlogNavProps) => {
             </div>
           </div>
           {/* secondary */}
-          <div className="w-2/3 flex justify-end  items-center gap-8 xl:gap-16 px-6">
-            <Link href="#">
-              <p className="text-white hover:text-yellow-300 text-sm">Home</p>
-            </Link>
-            <Link href="/about">
-              <p className="text-white hover:text-yellow-300 text-sm">About</p>
-            </Link>
+          <div className="w-2/3  justify-end  items-center gap-8 xl:gap-16 px-1 lg:flex">
+            <div className="hidden justify-end  items-center gap-8 xl:gap-16 px-6 lg:flex">
+              <Link href="#">
+                <p className="text-white hover:text-yellow-300 text-sm">Home</p>
+              </Link>
+              <Link href="/about">
+                <p className="text-white hover:text-yellow-300 text-sm">
+                  About
+                </p>
+              </Link>
+            </div>
             {/* <div className="hidden text-white lg:flex gap-8 xl:gap-16 font-medium text-sm">
               {pathname === "/" && (
                 <BlogsNav onCategoryChange={onCategoryChange} />
               )}
             </div> */}
-            <div className="flex lg:hidden">
+            <div className="flex lg:hidden pb-1">
               <SearchFunction />
             </div>
             {/* Mobile navigation toggle */}
-            <div className="lg:hidden flex items-center">
+            <div className="lg:hidden flex justify-end items-center mt-4">
               <button onClick={() => setToggleMenu(!toggleMenu)}>
                 <Bars3Icon className="h-6 text-white" />
               </button>
@@ -72,14 +76,22 @@ const MainNav: React.FC = ({ onCategoryChange }: BlogNavProps) => {
           }`}
         >
           <div className="px-8 py-4">
-            <div className="text-white font-semibold tracking-wider">
+            <div className="text-white tracking-wider">
               <ul className="flex flex-col gap-8">
                 <li className="border-b border-gray-200 pb-2 ">
                   <Link href="/" onClick={() => setToggleMenu(!toggleMenu)}>
-                    <p className="px-7 py-2 text-lg">Home</p>
+                    <p className="px-5 py-2 text-sm">Home</p>
                   </Link>
                 </li>
-                <li className="border-b border-gray-200 ">
+                <li className="border-b border-gray-200 pb-2 ">
+                  <Link
+                    href="/about"
+                    onClick={() => setToggleMenu(!toggleMenu)}
+                  >
+                    <p className="px-5 py-2 text-sm">About</p>
+                  </Link>
+                </li>
+                <li className="border-b border-gray-200">
                   <BlogsNavDropdown
                     onCategoryChange={handleCategoryChange}
                     closeMenu={() => setToggleMenu(false)}

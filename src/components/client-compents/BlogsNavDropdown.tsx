@@ -30,12 +30,12 @@ const BlogsNavDropdown: React.FC<BlogsNavProps> = ({
   ];
 
   return (
-    <div className="relative w-[91%] mx-auto mb-4 bg-black rounded-lg text-sm lg:text-base">
+    <div className="relative w-[91%] mx-auto mb-4 bg-black rounded-lg text-sm ">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="w-full text-left  bg-black text-white rounded-lg flex justify-between items-center"
       >
-        <span className="text-lg">{selectedCategory}</span>
+        <span className="text-md px-2">{selectedCategory}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={`h-5 w-5 transform transition-transform ${
@@ -55,14 +55,14 @@ const BlogsNavDropdown: React.FC<BlogsNavProps> = ({
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 right-0 bg-white text-black mt-1 rounded-lg shadow-lg z-10">
+        <div className="absolute left-0 right-0 bg-white text-black mt-1 shadow-lg z-10 px-2 py-2 rounded-xl ">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => handleCategorySelect(category.label)}
-              className={`block w-full text-left px-4 py-2 hover:bg-yellow-300 hover:text-black ${
+              className={`block w-full text-left px-4 py-2 hover:bg-yellow-300 text-sm rounded-xl hover:text-black ${
                 selectedCategory === category.label
-                  ? "bg-yellow-300 text-black"
+                  ? "bg-yellow-300 text-black font-semibold"
                   : ""
               }`}
             >
