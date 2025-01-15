@@ -132,7 +132,7 @@ const AddBlog = () => {
         <br />
         <Button
           type="submit"
-          className="mt-8 w-40 h-12 bg-slate-700 text-white hover:text-slate-100 rounded-xl text-lg font-medium hover:bg-slate-500"
+          className="mt-8 w-40 h-12 bg-zinc-700 text-white hover:text-slate-100 rounded-xl text-lg font-medium hover:bg-slate-500"
         >
           Add Blog
         </Button>
