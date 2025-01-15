@@ -14,7 +14,7 @@ const SubscribeForm = () => {
         </div>
         <Button
           type="submit"
-          className="rounded-full max-w-24 bg-yellow-300 hover:bg-yellow-100 hover:shadow-md  shadow-none hover:bg-opacity-90"
+          className="rounded-full max-w-24 bg-yellow-300 hover:bg-yellow-400 hover:shadow-md  shadow-none hover:bg-opacity-90"
         >
           <p className="text-black">Subscribe</p>
         </Button>

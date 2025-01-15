@@ -13,7 +13,7 @@ const loadDB = async () => {
 
 loadDB();
 
-// Fetching all blogs
+// Fetching single blog
 export async function GET(request: NextRequest) {
   const blogId = request.nextUrl.searchParams.get('id');
 

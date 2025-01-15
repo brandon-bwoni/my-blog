@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-/**import axios from axios */
+import axios from "axios";
 import { toast } from "react-toastify";
-
-import { MdOutlineFileUpload } from "react-icons/md";
+import DOMPurify from "dompurify";
 
 import { blogData } from "@/assets/assets";
 import upload from "@/assets/upload.png";
@@ -49,7 +48,7 @@ const AddBlog = () => {
           title: "",
           description: "",
           category: "Startup",
-          author: "Cole Bennett",
+          author: "Brandon Bwoni",
           authorImg: "/author.jpeg",
         });
       }
@@ -57,6 +56,9 @@ const AddBlog = () => {
       toast.error("Couldn't send data. Please try again");
     }
   };
+
+  // Sanitizing the HTML content
+  const sanitizedHtml = DOMPurify.sanitize(data.description);
 
   return (
     <>
@@ -99,12 +101,19 @@ const AddBlog = () => {
           name="description"
           onChange={onChangeHandler}
           value={data.description}
-          placeholder="Write content here"
+          placeholder="Write content here using HTML Markup"
           rows={6}
           required
           type="text"
           className="w-full sm:w-full mt-4 px-4 py-3 border rounded-xl"
         />
+        <div className="mt-4 border rounded-xl p-4 ">
+          <h3>Preview:</h3>
+          <div
+            className="rendered-html"
+            dangerouslySetInnerHTML={{ __html: data.description }}
+          />
+        </div>
         <p className="text-xl mt-6 font-semibold">Blog category</p>
         <select
           name="category"
@@ -115,9 +124,10 @@ const AddBlog = () => {
           <option disabled selected>
             --Choose Category--
           </option>
-          <option value="Startup">Startup</option>
-          <option value="Technology">Technology</option>
-          <option value="Lifestyle">Lifestyle</option>
+          <option value="Develepment">Develepment</option>
+          <option value="Security">Security</option>
+          <option value="AI/ML">AI/ML</option>
+          <option value="Web 3.0">Web 3.0</option>
         </select>
         <br />
         <Button
