@@ -46,8 +46,8 @@ const BlogTableItem = ({
                   <p className="text-xs font-semibold">Delete</p>
                 </Button>
                 <Button className="h-[48px] w-[60px] flex flex-col justify-center items-center shadow-none hover:shadow-md rounded-xl text-blue-500 hover:bg-blue-700 hover:text-white">
-                  <FaEdit className="w-4 h-4 " />
-                  <p className="text-xs">Edit blog</p>
+                  <FaEdit className="w-5 h-5 " />
+                  <p className="text-xs">Edit</p>
                 </Button>
               </div>
             </TableCell>

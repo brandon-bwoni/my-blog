@@ -73,7 +73,7 @@ const AddBlog = () => {
             width={140}
             height={70}
             alt=""
-            className="mt-3 border border-slate-700 rounded-xl"
+            className="mt-3 border border-slate-700 rounded-xl hover:cursor-pointer"
           />
         </label>
         <input

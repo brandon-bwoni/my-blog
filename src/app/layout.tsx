@@ -21,16 +21,15 @@ export default function RootLayout({
         <main>
           {children}
           <div className="flex justify-center gap-4 text-xs items-center bg-white h-6 font-medium">
-            <span>&copy; 2024</span>
+            <span>&copy; 2025</span>
             <span>
               Designed & Developed by{" "}
-              <Link
-                href="#"
+              <a
+                href="https://brandontakuraportfolio.vercel.app"
                 className="text-red-500 hover:underline"
-                passHref={true}
               >
                 takura_dev
-              </Link>
+              </a>
             </span>
           </div>
         </main>

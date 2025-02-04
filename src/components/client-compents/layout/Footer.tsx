@@ -49,9 +49,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col text-white items-center lg:items-start">
             <span className="text-2xl font-bold text-white">Contacts</span>
-            <Link href="mailto:takura.buzz@gmail.com" passHref={true}>
-              takura.buzz@gmail.com
-            </Link>
+            <a href="mailto:takura.buzz@gmail.com"></a>
           </div>
         </div>
       </div>

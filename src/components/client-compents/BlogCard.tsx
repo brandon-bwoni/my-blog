@@ -23,7 +23,7 @@ const BlogCard = ({
 }: BlogProps) => {
   return (
     <Link href={`/blogs/${id}`}>
-      <Card className="w-[270px] sm:max-w-[260px] h-[370px] rounded-3xl relative bg-gray-200 border  hover:transition-all hover:shadow-xl hover:border-0 shadow-none">
+      <Card className="w-[270px] h-[370px] rounded-3xl relative bg-gray-200 border  hover:transition-all hover:shadow-xl hover:border-0 shadow-none">
         <div className="h-1/2">
           <Link href="#">
             <Image
